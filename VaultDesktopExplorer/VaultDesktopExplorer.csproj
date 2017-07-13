@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>a9d6d9f4-7fab-4cfe-9a12-43542cbf9ce7</ProjectGuid>
+    <ProjectGuid>{A9D6D9F4-7FAB-4CFE-9A12-43542CBF9CE7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VaultDesktopExplorer</RootNamespace>
@@ -29,27 +29,100 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Key.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="Apex.WinForms, Version=1.6.0.0, Culture=neutral, PublicKeyToken=98d06957926c086d, processorArchitecture=MSIL">
+      <HintPath>packages\SharpShellTools.2.2.0.0\lib\Apex.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autodesk.Connectivity.Explorer.Extensibility, Version=22.0.0.0, Culture=neutral, PublicKeyToken=aa20f34aedd220e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Autodesk\Autodesk Vault 2017 SDK\bin\x86\Autodesk.Connectivity.Explorer.Extensibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Connectivity.Explorer.ExtensibilityTools">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Autodesk\Autodesk Vault 2017 SDK\bin\x86\Autodesk.Connectivity.Explorer.ExtensibilityTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Connectivity.Extensibility.Framework, Version=22.0.0.0, Culture=neutral, PublicKeyToken=aa20f34aedd220e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Autodesk\Autodesk Vault 2017 SDK\bin\x86\Autodesk.Connectivity.Extensibility.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Connectivity.JobProcessor.Extensibility">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Autodesk\Autodesk Vault 2017 SDK\bin\x86\Autodesk.Connectivity.JobProcessor.Extensibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Connectivity.WebServices, Version=22.0.0.0, Culture=neutral, PublicKeyToken=aa20f34aedd220e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Autodesk\Autodesk Vault 2017 SDK\bin\x86\Autodesk.Connectivity.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Connectivity.WebServices.Interop, Version=22.0.0.0, Culture=neutral, PublicKeyToken=aa20f34aedd220e1, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Autodesk\Autodesk Vault 2017 SDK\bin\x86\Autodesk.Connectivity.WebServices.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.Connectivity.WebServices.WCF, Version=22.0.56.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Autodesk\Autodesk Vault 2017 SDK\bin\x86\Autodesk.Connectivity.WebServices.WCF.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.DataManagement.Client.Framework, Version=22.0.0.0, Culture=neutral, PublicKeyToken=aa20f34aedd220e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Autodesk\Autodesk Vault 2017 SDK\bin\x86\Autodesk.DataManagement.Client.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.DataManagement.Client.Framework.Forms, Version=22.0.0.0, Culture=neutral, PublicKeyToken=aa20f34aedd220e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Autodesk\Autodesk Vault 2017 SDK\bin\x86\Autodesk.DataManagement.Client.Framework.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.DataManagement.Client.Framework.Vault, Version=22.0.0.0, Culture=neutral, PublicKeyToken=aa20f34aedd220e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Autodesk\Autodesk Vault 2017 SDK\bin\x86\Autodesk.DataManagement.Client.Framework.Vault.dll</HintPath>
+    </Reference>
+    <Reference Include="Autodesk.DataManagement.Client.Framework.Vault.Forms, Version=22.0.0.0, Culture=neutral, PublicKeyToken=aa20f34aedd220e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Autodesk\Autodesk Vault 2017 SDK\bin\x86\Autodesk.DataManagement.Client.Framework.Vault.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="ServerManager, Version=2.2.0.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>packages\SharpShellTools.2.2.0.0\lib\ServerManager.exe</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpShell, Version=2.2.0.0, Culture=neutral, PublicKeyToken=f14dc899472fe6fb, processorArchitecture=MSIL">
+      <HintPath>packages\SharpShellTools.2.2.0.0\lib\SharpShell.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="srm, Version=2.2.0.0, Culture=neutral, PublicKeyToken=68bd4561cc3495fc, processorArchitecture=MSIL">
+      <HintPath>packages\SharpShellTools.2.2.0.0\lib\srm.exe</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DesktopExplorer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Key.pfx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="clmloader.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -57,5 +130,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
- </Project>
+</Project>
