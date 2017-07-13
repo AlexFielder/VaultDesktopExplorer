@@ -7,8 +7,8 @@
     <ProjectGuid>{64C33680-4B49-44F2-A470-F79F80008178}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>VaultDesktopIcons</RootNamespace>
-    <AssemblyName>VaultDesktopIcons</AssemblyName>
+    <RootNamespace>ReadOnlyVaultDesktopIconHandler</RootNamespace>
+    <AssemblyName>ReadOnlyVaultDesktopIconHandler</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -28,6 +28,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Key.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Apex.WinForms, Version=1.6.0.0, Culture=neutral, PublicKeyToken=98d06957926c086d, processorArchitecture=MSIL">
@@ -73,6 +79,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Key.pfx" />
     <None Include="packages.config" />
     <None Include="Resources\ReadOnly.ico" />
   </ItemGroup>

@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Hewlett-Packard Company")]
-[assembly: AssemblyProduct("VaultDesktopIcons")]
+[assembly: AssemblyProduct("ReadOnlyVaultDesktopIconHandler")]
 [assembly: AssemblyCopyright("Copyright © Hewlett-Packard Company 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

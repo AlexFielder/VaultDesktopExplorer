@@ -8,9 +8,12 @@ using SharpShell.Interop;
 using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
+using SharpShell.Attributes;
 
 namespace LockedVaultDesktopIconHandler
 {
+    [ComVisible(true)]
+    [COMServerAssociation(SharpShell.Attributes.AssociationType.ClassOfExtension, "*.*")]
     public class LockedVaultDesktopIconHandler : SharpIconOverlayHandler
     {
         protected override bool CanShowOverlay(string path, FILE_ATTRIBUTE attributes)
